@@ -1,24 +1,20 @@
-"use strict";
+import assert from "assert";
 
-function beginningZeros(number) {
+function beginningZeros(text: string): number {
     // your code here
     return 0;
 }
 
-var assert = require('assert');
+console.log('Example:');
+console.log(beginningZeros('100'));
 
-if (!global.is_checking) {
-    console.log('Example:');
-    console.log(beginningZeros('100'));
+// These "asserts" are used for self-checking
+assert.equal(beginningZeros('100'), 0);
+assert.equal(beginningZeros('001'), 2);
+assert.equal(beginningZeros('100100'), 0);
+assert.equal(beginningZeros('001001'), 2);
+assert.equal(beginningZeros('012345679'), 1);
+assert.equal(beginningZeros('0000'), 4);
 
-    // These "asserts" are used for self-checking
-    assert.equal(beginningZeros('100'), 0);
-    assert.equal(beginningZeros('001'), 2);
-    assert.equal(beginningZeros('100100'), 0);
-    assert.equal(beginningZeros('001001'), 2);
-    assert.equal(beginningZeros('012345679'), 1);
-    assert.equal(beginningZeros('0000'), 4);
-
-    console.log("Coding complete? Click 'Check' to earn cool rewards!");
-}
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
     
