@@ -10,8 +10,8 @@ api.add_listener(
     CheckiOReferee(
         tests=TESTS,
         function_name={
-            "python": "number_length",
-            "js": "numberLength"
+            "python": "beginning_zeros",
+            "js": "beginningZeros"
         },
         cover_code={
             'python-3': {},
