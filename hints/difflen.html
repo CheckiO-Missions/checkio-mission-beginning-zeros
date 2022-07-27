@@ -1,0 +1,53 @@
+<body data-author="freeman_lex>
+    <div class="question-answer">
+        <div class="question">
+            I have no idea how to start solving this mission!
+        </div>
+        <div class="answer">
+            <p>Think about what will happen if to convert input string with beginning zeros to integer?</p>
+            <p>They will be deleted, because from the point of math 0005 is the same is 5. So you just have to find difference in length before and after convertion.</p>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            Which function I'm looking for?
+        </div>
+        <div class="answer">
+            <p>To solve this mission you will need such functions as len, str, int.</p>
+            <p>Convert input string to integer (use function int), convert back to string (str) to be able to compare length. Find and compare length of input string and string you get after convertions.</p>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            Ok. How can I use it then?
+        </div>
+        <div class="answer">
+            <pre class="brush: python">
+                input_string = '0005'
+                input_string_len = len(input_string) # you will get 4
+                input_string_to_int = int(input_string) # you will get 5
+                input_string_to_int_to_str = str(input_string_to_int) # you will get '5' wuthout zeros
+                input_string_to_int_to_str_len = len(input_string_to_int_to_str) # you will get 1
+                input_string_len - input_string_to_int_to_str_len # find and return difference
+            </pre>
+            <p>Don't forget special case as string of all zeros.</p>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            The last question. How my final solution will look like?
+        </div>
+        <div class="answer">
+            <pre class="brush: python">
+                def beginning_zeros(a: str) -> int:
+    
+                a_num = int(a)
+                if not a_num: # case a as all zeros
+                    
+                    return len(a)
+                
+                return len(a) - len(str(a_num))
+            </pre>
+        </div>
+    </div>
+</body>
