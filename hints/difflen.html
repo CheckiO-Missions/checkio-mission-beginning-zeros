@@ -49,14 +49,14 @@ input_string_len - input_string_to_int_to_str_len
         </div>
         <div class="answer">
             <pre class="brush: python">
-    def beginning_zeros(a: str) -> int:
+def beginning_zeros(a: str) -> int:
 
-        a_num = int(a)
-        if not a_num: # case a as all zeros
+    a_num = int(a)
+    if not a_num: # case a as all zeros
 
-            return len(a)
+        return len(a)
 
-        return len(a) - len(str(a_num))
+    return len(a) - len(str(a_num))
             </pre>
         </div>
     </div>
