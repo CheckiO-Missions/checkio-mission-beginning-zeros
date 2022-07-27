@@ -1,0 +1,53 @@
+<body data-author="freeman_lex>
+    <div class="question-answer">
+        <div class="question">
+            Не маю жодної думки, як розпочати розвязання цієї місії!
+        </div>
+        <div class="answer">
+            <p>Подумай, що трапиться, якщо конвертувати вхідний рядок із початковими нулями у ціле число?</p>
+            <p>Нулі зникнуть, тому що з математичної точки зору 0005 дорівнює 5. Тож тобі потрібно лише знайти різницю довжин початкового рядка і після конвертації.</p>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            Які ж функції мені потрібно використати?
+        </div>
+        <div class="answer">
+            <p>Для розв'язання цієї міссії тобі знадобляться функції len, str, int.</p>
+            <p>Ковертуй вхідний рядок у ціле число (використай функцію int), конвертуй назад у рядок (str), щоб мати можливість порівняти довжину. Знайди і порівняй довжити вхідного рядка і рядка після конвертацій.</p>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            Добре. Як конкретно мені використати ці функції?
+        </div>
+        <div class="answer">
+            <pre class="brush: python">
+                input_string = '0005'
+                input_string_len = len(input_string) # отримаєш 4
+                input_string_to_int = int(input_string) # отримаєш 5
+                input_string_to_int_to_str = str(input_string_to_int) # отримаєш рядок '5' без нулів
+                input_string_to_int_to_str_len = len(input_string_to_int_to_str) # отримаєш 1
+                input_string_len - input_string_to_int_to_str_len # знайди і поверни різницю довжин рядків
+            </pre>
+            <p>Не забудь випадок, коли рядок складається лише з нулів.</p>
+        </div>
+    </div>
+    <div class="question-answer">
+        <div class="question">
+            І останнє питання. Як має виглядати остаточний розв'язок?
+        </div>
+        <div class="answer">
+            <pre class="brush: python">
+                def beginning_zeros(a: str) -> int:
+    
+                a_num = int(a)
+                if not a_num: # випадок, коли в рядку всі нулі
+                    
+                    return len(a)
+                
+                return len(a) - len(str(a_num))
+            </pre>
+        </div>
+    </div>
+</body>
