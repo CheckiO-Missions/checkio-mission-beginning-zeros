@@ -1,28 +1,34 @@
 <body data-author="freeman_lex">
-    <div class="question-answer">
-        <div class="question">
-            I have no idea how to start solving this mission!
-        </div>
-        <div class="answer">
-            <p>Think about what will happen if to convert input string with beginning zeros to integer?</p>
-            <p>They will be deleted, because from the point of math 0005 is the same is 5. So you just have to find difference in length before and after convertion.</p>
-        </div>
+<div class="question-answer">
+    <div class="question">
+        <i>I have no idea how to start solving this mission!</i>
     </div>
-    <div class="question-answer">
-        <div class="question">
-            Which function I'm looking for?
-        </div>
-        <div class="answer">
-            <p>To solve this mission you will need such functions as len, str, int.</p>
-            <p>Convert input string to integer (use function int), convert back to string (str) to be able to compare length. Find and compare length of input string and string you get after convertions.</p>
-        </div>
+    <div class="answer">
+        <p>
+            💡 Think about what will happen if to convert input string with beginning zeros to integer?
+        </p>
+        <p>
+            They will be deleted, because from the point of math 0005 is the same is 5. So you just have to find difference in length before and after conversion.
+        </p>
     </div>
-    <div class="question-answer">
-        <div class="question">
-            Ok. How can I use it then?
-        </div>
-        <div class="answer">
-            <pre class="brush: python">
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Which function am I looking for?</i>
+    </div>
+    <div class="answer">
+        <p>To solve this mission you will need such functions as <a target="_blank" href="https://www.w3schools.com/python/gloss_python_string_length.asp">str.len()</a>, <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>, <a target="_blank" href="https://www.w3schools.com/python/ref_func_int.asp">int()</a>.</p>
+        <p>
+            Convert input string to integer (use function <b class="code">int()</b>), convert back to string (<b class="code">str()</b>) to be able to compare lengths. Find (<b class="code">str.len()</b>) and compare length of input string and string you get after conversions.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>Ok. How can I use it then?</i>
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
 input_string = '0005'
 
 input_string_len = len(input_string)
@@ -32,32 +38,83 @@ input_string_to_int = int(input_string)
 # you will get 5
 
 input_string_to_int_to_str = str(input_string_to_int)
-# you will get '5' wuthout zeros
+# you will get '5' without zeros
 
 input_string_to_int_to_str_len = len(input_string_to_int_to_str)
 # you will get 1
 
 input_string_len - input_string_to_int_to_str_len
 # find and return difference
-            </pre>
-            <p>Don't forget special case as string of all zeros.</p>
-        </div>
+        </pre>
+        <p>Don't forget special case as string of all zeros.</p>
     </div>
-    <div class="question-answer">
-        <div class="question">
-            The last question. How my final solution will look like?
-        </div>
-        <div class="answer">
-            <pre class="brush: python">
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>The last question. How my final solution will look like?</i>
+    </div>
+    <div class="answer">
+        <p>
+            Here is the whole code.
+        </p>
+        <pre class="brush: python">
 def beginning_zeros(a: str) -> int:
 
-    a_num = int(a)
-    if not a_num: # case a as all zeros
+a_num = int(a)
+if not a_num: # case a as all zeros
 
-        return len(a)
+    return len(a)
 
-    return len(a) - len(str(a_num))
-            </pre>
-        </div>
+return len(a) - len(str(a_num))
+        </pre>
     </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Show me more solutions!<br />
+            'Cause I wanna be a real 🥇 Python Ninnjaa!
+        </i>
+    </div>
+    <div class="answer">
+        <p>Sure, grab it!</p>
+        <p>
+            In this solution you remove zeros from the beginning of string in another way.
+        </p>
+        <pre class="brush: python">
+def beginning_zeros(number: str) -> int:
+
+    return len(number) - len(number.lstrip('0'))
+        </pre>
+        <p>
+            Here you iterate over the string, comparing each character with "0" and increasing pre-declared counter in case of equality.
+        </p>
+        <pre class="brush: python">
+def beginning_zeros(number: str) -> int:
+
+    result = 0
+    for n in number:
+        if n != "0":
+            break
+        result += 1
+
+    return result
+        </pre>
+        <p>
+            <b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b>
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <i>
+            Thanks! I know and understand more now! Everything works fine!
+        </i>
+    </div>
+    <div class="answer">
+        <p>
+            👍 Glad to hear it!
+        </p>
+    </div>
+</div>
 </body>
