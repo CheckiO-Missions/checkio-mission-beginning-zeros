@@ -68,6 +68,7 @@ if (num == 0) // or (!num)
             Тобі просто потрібно обгорнути свій код у вираз функції та повернути різницю між двома довжинами.
         </p>
         <p>Ось повне рішення:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function beginningZeros(text: string): number {
 
@@ -78,6 +79,7 @@ function beginningZeros(text: string): number {
     return text.length - (num+"").length;
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -90,15 +92,18 @@ function beginningZeros(text: string): number {
         <p>
             Використай регулярний вираз, щоб знайти конкретну схему в рядку (нуль або більше нулів з самого початку) і поверни довжину підрядка, що відповідає шаблону.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function beginningZeros(t: string): number {
     
     return t.match(/^0*/)[0].length
 }
         </pre>
+        </div>
         <p>
             Всередині визначення циклу оголоси змінну і збільшуй її до тих пір, поки символ в рядку з цим індексом рівний "0".
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function beginningZeros(text: string): number {
     
@@ -107,6 +112,7 @@ function beginningZeros(text: string): number {
     return i;
 }
         </pre>
+        </div>
         <p><b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b></p>
     </div>
 </div>
