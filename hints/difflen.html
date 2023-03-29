@@ -57,6 +57,7 @@ input_string_len - input_string_to_int_to_str_len
         <p>
             Here is the whole code.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def beginning_zeros(a: str) -> int:
 
@@ -67,6 +68,7 @@ def beginning_zeros(a: str) -> int:
 
     return len(a) - len(str(a_num))
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -81,14 +83,17 @@ def beginning_zeros(a: str) -> int:
         <p>
             In this solution you remove zeros from the beginning of string in another way.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def beginning_zeros(number: str) -> int:
 
     return len(number) - len(number.lstrip('0'))
         </pre>
+        </div>
         <p>
             Here you iterate over the string, comparing each character with "0" and increasing pre-declared counter in case of equality.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def beginning_zeros(number: str) -> int:
 
@@ -100,6 +105,7 @@ def beginning_zeros(number: str) -> int:
 
     return result
         </pre>
+        </div>
         <p>
             <b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b>
         </p>
