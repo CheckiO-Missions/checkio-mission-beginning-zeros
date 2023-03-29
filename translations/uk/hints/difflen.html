@@ -52,6 +52,7 @@ input_string_len - input_string_to_int_to_str_len
         <p>І останнє питання. Як має виглядати остаточний розв'язок?</p>
     </div>
     <div class="answer">
+        <div class="spoiler">
         <pre class="brush: python">
 def beginning_zeros(a: str) -> int:
 
@@ -62,6 +63,7 @@ def beginning_zeros(a: str) -> int:
 
     return len(a) - len(str(a_num))
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -76,14 +78,17 @@ def beginning_zeros(a: str) -> int:
         <p>
             У цьому розв'язку ти видаляєш нулі з початку рядка по-іншому.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def beginning_zeros(number: str) -> int:
 
     return len(number) - len(number.lstrip('0'))
         </pre>
+        </div>
         <p>
             Тут ти проходиш рядком, порівнюючи кожен символ з "0" та збільшуючи попередньо визначений лічильник у разі рівності.
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def beginning_zeros(number: str) -> int:
 
@@ -95,6 +100,7 @@ def beginning_zeros(number: str) -> int:
 
     return result
         </pre>
+        </div>
         <p>
             <b>Тисни "Best solutions" в меню місії і побачиш багато інших цікавих розв'язків!</b>
         </p>
