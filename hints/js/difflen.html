@@ -68,6 +68,7 @@ if (num == 0) // or (!num)
             You just need to wrap your code into function expression and return the difference between two lengths.
         </p>
         <p>Here is the whole solution:</p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function beginningZeros(text: string): number {
 
@@ -78,6 +79,7 @@ function beginningZeros(text: string): number {
     return text.length - (num+"").length;
 }
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
@@ -90,15 +92,18 @@ function beginningZeros(text: string): number {
         <p>
             Use regular expression to find specific pattern in the string (zero or more zeros from the beginning) and return the length of substring that fits the pattern.
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function beginningZeros(t: string): number {
     
     return t.match(/^0*/)[0].length
 }
         </pre>
+        </div>
         <p>
             Inside the definition of loop declare a variable and increase it until the character of string at this index equal "0". 
         </p>
+        <div class="spoiler">
         <pre class="brush: javascript">
 function beginningZeros(text: string): number {
     
@@ -107,6 +112,7 @@ function beginningZeros(text: string): number {
     return i;
 }
         </pre>
+        </div>
         <p><b>Click "Best solutions" at mission menu and see a lot of other interesting solutions!</b></p>
     </div>
 </div>
