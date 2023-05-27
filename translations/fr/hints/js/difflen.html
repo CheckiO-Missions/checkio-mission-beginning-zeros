@@ -1,0 +1,127 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Je n'ai aucune idée de la manière de commencer à résoudre cette mission.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Pensez à ce qui se passera si vous convertissez une chaîne de caractères avec des zéros au début en un nombre entier?
+        </p>
+        <p>
+            Ils seront supprimés, car du point de vue mathématique, 0005 est identique à 5. Il vous suffit donc de trouver la différence de longueur avant et après la conversion.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, par quoi dois-je commencer?</p>
+    </div>
+    <div class="answer">
+        <p>
+           Vous devez commencer par convertir la chaîne de caractères en nombre et l'assigner à une nouvelle variable. Vous pouvez le faire, juste pour ajouter <b class="code">+</b> avant la chaîne! 
+        </p>
+        <pre class="brush: javascript">
+let num = +text;
+        </pre>
+        <p>
+            Cela supprime tous les zéros du début.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Que faire ensuite?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Si c'est le cas, cela signifie que toute la chaîne initiale est composée de zéros et vous pouvez retourner sa longueur à l'aide de la propriété <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a>.
+        </p>
+        <pre class="brush: javascript">
+if (num == 0) // or (!num)
+    return text.length;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Comment trouver la longueur du nouveau nombre?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Vous devez reconvertir le nombre en chaîne de caractères et trouver sa propriété de longueur. Effectuez la conversion à l'aide de l'opération <b class="code">+""</b>!
+        </p>
+        <pre class="brush: javascript">
+(num+"").length
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Alors, à quoi devrait ressembler ma solution finale?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Il vous suffit de transformer votre code en une expression de fonction et de renvoyer la différence entre deux longueurs.
+        </p>
+        <p>Voici la solution complète:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(text: string): number {
+
+    let num = +text;
+    if (!num)
+        return text.length;
+    
+    return text.length - (num+"").length;
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Montrez-moi d'autres solutions!<br />
+        parce que je veux être un vrai 🥇 Javascript Hero!</p>
+    </div>
+    <div class="answer">
+        <p>Bien sûr, prenez-le!</p>
+        <p>
+            Utilisez une expression régulière pour trouver un motif spécifique dans la chaîne (zéro ou plusieurs zéros à partir du début) et renvoyez la longueur de la sous-chaîne qui correspond au motif.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(t: string): number {
+    
+    return t.match(/^0*/)[0].length
+}
+        </pre>
+        </div>
+        <p>
+            Dans la définition de la boucle, déclarez une variable et augmentez-la jusqu'à ce que le caractère de la chaîne à cet index soit égal à "0". 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(text: string): number {
+    
+    for (var i = 0; text[i] === '0'; i++);
+
+    return i;
+}
+        </pre>
+        </div>
+        <p><b>Cliquez sur "Meilleures solutions" dans le menu mission et découvrez de nombreuses autres solutions intéressantes!</b></p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Merci beaucoup! Je sais et je comprends mieux maintenant! Tout fonctionne bien!</p>
+    </div>
+    <div class="answer">
+        👍 Heureux de l'apprendre!
+    </div>
+</div>
+</body>
