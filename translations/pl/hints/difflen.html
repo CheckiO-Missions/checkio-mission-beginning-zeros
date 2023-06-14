@@ -1,0 +1,125 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję!</p>
+    </div>
+    <div class="answer">
+        <p>
+            proszę pomyśleć, co się stanie, jeśli przekonwertujemy ciąg wejściowy z początkowymi zerami na liczbę całkowitą?
+        </p>
+        <p>
+            Zostaną one usunięte, ponieważ z matematycznego punktu widzenia 0005 to to samo co 5. Trzeba więc znaleźć różnicę w długości przed i po konwersji.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jakiej funkcji szukam?</p>
+    </div>
+    <div class="answer">
+        <p>Do rozwiązania tego zadania będzie Pan potrzebował takich funkcji jak <a target="_blank" href="https://www.w3schools.com/python/gloss_python_string_length.asp">str.len()</a>, <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>, <a target="_blank" href="https://www.w3schools.com/python/ref_func_int.asp">int()</a>.</p>
+        <p>
+            Proszę przekonwertować wejściowy ciąg znaków na liczbę całkowitą (proszę użyć funkcji <b class="code">int()</b>), przekonwertować z powrotem na ciąg znaków (<b class="code">str()</b>), aby móc porównać długości. Proszę znaleźć (<b class="code">str.len()</b>) i porównać długość ciągu wejściowego i ciągu otrzymanego po konwersji.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok. Jak mogę tego użyć?</p>
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+input_string = '0005'
+
+input_string_len = len(input_string)
+# you will get 4
+
+input_string_to_int = int(input_string)
+# you will get 5
+
+input_string_to_int_to_str = str(input_string_to_int)
+# you will get '5' without zeros
+
+input_string_to_int_to_str_len = len(input_string_to_int_to_str)
+# you will get 1
+
+input_string_len - input_string_to_int_to_str_len
+# find and return difference
+        </pre>
+        <p>Proszę nie zapomnieć o przypadku specjalnym jako ciąg wszystkich zer.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ostatnie pytanie. Jak będzie wyglądało moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Oto cały kod.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(a: str) -> int:
+
+    a_num = int(a)
+    if not a_num: # case a as all zeros
+
+        return len(a)
+
+    return len(a) - len(str(a_num))
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Proszę pokazać mi więcej rozwiązań!<br />
+            bo chcę być prawdziwym 🥇 Python Ninnjaa!
+        </p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę łapać!</p>
+        <p>
+            W tym rozwiązaniu usuwa Pan zera z początku ciągu w inny sposób.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(number: str) -> int:
+
+    return len(number) - len(number.lstrip('0'))
+        </pre>
+        </div>
+        <p>
+            Tutaj proszę iterować po łańcuchu, porównując każdy znak z "0" i zwiększając wcześniej zadeklarowany licznik w przypadku równości.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(number: str) -> int:
+
+    result = 0
+    for n in number:
+        if n!= "0":
+            break
+        result += 1
+
+    return result
+        </pre>
+        </div>
+        <p>Proszę kliknąć <b>Best Solutions</b> w menu misji i zobaczyć wiele innych ciekawych rozwiązań!
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa jak należy!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            miło mi to słyszeć!
+        </p>
+    </div>
+</div>
+</body>
