@@ -1,0 +1,127 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Nie mam pojęcia, jak zacząć rozwiązywać tę misję.</p>
+    </div>
+    <div class="answer">
+        <p>
+            proszę pomyśleć, co się stanie, jeśli przekonwertujemy ciąg wejściowy z początkowymi zerami na liczbę całkowitą?
+        </p>
+        <p>
+            Zostaną one usunięte, ponieważ z matematycznego punktu widzenia 0005 to to samo co 5. Proszę więc znaleźć różnicę w długości przed i po konwersji.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, od czego powinienem zacząć?</p>
+    </div>
+    <div class="answer">
+        <p>
+           Powinien Pan zacząć od przekonwertowania ciągu na liczbę i przypisania go do nowej zmiennej. Może Pan to zrobić, aby dodać <b class="code">+</b> przed ciągiem! 
+        </p>
+        <pre class="brush: javascript">
+let num = +text;
+        </pre>
+        <p>
+            Usunie to wszystkie zera z początku.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Co robić dalej?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Teraz można od razu sprawdzić, czy <b class="code">num</b> jest równe <b class="code">0</b>. Jeśli tak, oznacza to, że cały początkowy ciąg składa się z zer i można zwrócić jego długość za pomocą właściwości <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a>.
+        </p>
+        <pre class="brush: javascript">
+if (num == 0) // or (!num)
+    return text.length;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Jak znaleźć długość nowej liczby?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Proszę przekonwertować liczbę z powrotem na ciąg znaków i znaleźć jego długość. Proszę wykonać konwersję za pomocą operacji <b class="code">+""</b>!
+        </p>
+        <pre class="brush: javascript">
+(num+"").length
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Jak powinno wyglądać moje ostateczne rozwiązanie?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Wystarczy zawinąć kod w wyrażenie funkcyjne i zwrócić różnicę między dwiema długościami.
+        </p>
+        <p>Oto całe rozwiązanie:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(text: string): number {
+
+    let num = +text;
+    if (!num)
+        return text.length;
+    
+    return text.length - (num+"").length;
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Proszę pokazać mi więcej rozwiązań!<br />
+        bo chcę być prawdziwym 🥇 bohaterem Javascriptu!</p>
+    </div>
+    <div class="answer">
+        <p>Jasne, proszę pobrać!</p>
+        <p>
+            Proszę użyć wyrażenia regularnego, aby znaleźć określony wzorzec w ciągu (zero lub więcej zer od początku) i zwrócić długość podciągu, który pasuje do wzorca.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(t: string): number {
+    
+    return t.match(/^0*/)[0].length
+}
+        </pre>
+        </div>
+        <p>
+            Wewnątrz definicji pętli proszę zadeklarować zmienną i zwiększać ją do momentu, aż znak ciągu przy tym indeksie będzie równy "0". 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(text: string): number {
+    
+    for (var i = 0; text[i] === '0'; i++);
+
+    return i;
+}
+        </pre>
+        </div>
+        <p>Proszę kliknąć <b>Best Solutions</b> w menu misji i zobaczyć wiele innych ciekawych rozwiązań!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa dobrze!</p>
+    </div>
+    <div class="answer">
+        miło mi to słyszeć!
+    </div>
+</div>
+</body>
