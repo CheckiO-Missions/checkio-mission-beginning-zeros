@@ -6,11 +6,11 @@
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input:</strong> A <span translate="repeat">string</span>, that consists of digits.
+    <strong>Input:</strong> A string <span translate="no">{% if is_js %}(string){% else %}(str){% endif %}</span>, that consists of digits.
 </p>
 
 <p>
-    <strong>Output:</strong> A {% if is_js %}<span translate="repeat">number</span>{% else %}<span translate="repeat">integer</span>{% endif %}. 
+    <strong>Output:</strong> An integer <span translate="no">{% if is_js %}(number){% else %}(int){% endif %}</span>. 
 </p>
 
 
