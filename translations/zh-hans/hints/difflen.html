@@ -1,0 +1,125 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>我不知道如何开始解决这个任务!</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 想一想，如果把带有开头零的输入字符串转换成整数，会发生什么？
+        </p>
+        <p>
+            它们会被删除，因为从数学的角度来看，0005和5是一样的。 所以你只需要找到转换前后的长度差异。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>我要找的是哪个函数？</p>
+    </div>
+    <div class="answer">
+        <p>为了解决这个问题，你需要这样的函数：<a target="_blank" href="https://www.w3schools.com/python/gloss_python_string_length.asp">str.len()</a>,<a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>,<a target="_blank" href="https://www.w3schools.com/python/ref_func_int.asp">int()</a> 。</p>
+        <p>
+            将输入的字符串转换为整数（使用函数<b class="code">int()</b> ），再转换为字符串（<b class="code">str()</b> ），以便能够比较长度。找到 (<b class="code">str.len()</b>) 并比较输入字符串和转换后得到的字符串的长度。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>好的，那我该如何使用它呢？</p>
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+input_string = '0005'
+
+input_string_len = len(input_string)
+# you will get 4
+
+input_string_to_int = int(input_string)
+# you will get 5
+
+input_string_to_int_to_str = str(input_string_to_int)
+# you will get '5' without zeros
+
+input_string_to_int_to_str_len = len(input_string_to_int_to_str)
+# you will get 1
+
+input_string_len - input_string_to_int_to_str_len
+# find and return difference
+        </pre>
+        <p>不要忘了特殊情况，如全部为零的字符串。</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>最后一个问题。我的最终解决方案会是什么样子的？</p>
+    </div>
+    <div class="answer">
+        <p>
+            下面是整个代码。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(a: str) -> int:
+
+    a_num = int(a)
+    if not a_num: # case a as all zeros
+
+        return len(a)
+
+    return len(a) - len(str(a_num))
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            告诉我更多的解决方案!<br />
+            因为我想成为一个真正的🥇 Python Ninnjaa!
+        </p>
+    </div>
+    <div class="answer">
+        <p>当然，抓住它!</p>
+        <p>
+            在这个解决方案中，你用另一种方式从字符串的开头去除零。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(number: str) -> int:
+
+    return len(number) - len(number.lstrip('0'))
+        </pre>
+        </div>
+        <p>
+            在这里，你对字符串进行迭代，将每个字符与 "0 "进行比较，在相等的情况下增加预设的计数器。
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(number: str) -> int:
+
+    result = 0
+    for n in number:
+        if n!= "0":
+            break
+        result += 1
+
+    return result
+        </pre>
+        </div>
+        <p>点击任务菜单中的<b>Best Solutions</b> ，可以看到很多其他有趣的解决方案!
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            谢谢!我现在知道并理解了更多!一切工作都很顺利!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍很高兴听到这个消息!
+        </p>
+    </div>
+</div>
+</body>
