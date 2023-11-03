@@ -1,0 +1,127 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Überlegen Sie, was passiert, wenn Sie eine Zeichenkette, die mit Nullen beginnt, in eine Ganzzahl umwandeln?
+        </p>
+        <p>
+            Sie werden gelöscht, denn aus mathematischer Sicht ist 0005 dasselbe wie 5. Sie müssen also nur den Unterschied in der Länge vor und nach der Konvertierung finden.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok, womit soll ich anfangen?</p>
+    </div>
+    <div class="answer">
+        <p>
+           Sie sollten damit beginnen, die Zeichenkette in eine Zahl zu konvertieren und sie einer neuen Variablen zuzuweisen. Fügen Sie einfach <b class="code">+</b> vor der Zeichenkette hinzu! 
+        </p>
+        <pre class="brush: javascript">
+let num = +text;
+        </pre>
+        <p>
+            Dadurch werden alle Nullen am Anfang entfernt.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Was ist als nächstes zu tun?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Jetzt können Sie sofort prüfen, ob <b class="code">num</b> gleich <b class="code">0</b> ist. Wenn dies der Fall ist, bedeutet dies, dass die gesamte ursprüngliche Zeichenkette aus Nullen besteht und Sie können ihre Länge mit der Eigenschaft <a target="_blank" href="https://www.w3schools.com/jsref/jsref_length_string.asp">string.length</a> zurückgeben.
+        </p>
+        <pre class="brush: javascript">
+if (num == 0) // or (!num)
+    return text.length;
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Wie ermittelt man die Länge der neuen Zahl?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen die Zahl zurück in eine Zeichenkette konvertieren und ihre Längeneigenschaft ermitteln. Führen Sie die Konvertierung mit der Operation <b class="code">+""</b> durch!
+        </p>
+        <pre class="brush: javascript">
+(num+"").length
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Wie sollte also meine endgültige Lösung aussehen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Sie müssen nur Ihren Code in einen Funktionsausdruck einpacken und die Differenz zwischen zwei Längen zurückgeben.
+        </p>
+        <p>Hier ist die gesamte Lösung:</p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(text: string): number {
+
+    let num = +text;
+    if (!num)
+        return text.length;
+    
+    return text.length - (num+"").length;
+}
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Zeigen Sie mir mehr Lösungen!<br />
+        denn ich möchte ein echter 🥇 Javascript-Held sein!</p>
+    </div>
+    <div class="answer">
+        <p>Klar, schnappen Sie es sich!</p>
+        <p>
+            Verwenden Sie einen regulären Ausdruck, um ein bestimmtes Muster in der Zeichenkette zu finden (null oder mehr Nullen vom Anfang an) und geben Sie die Länge der Teilzeichenkette zurück, die dem Muster entspricht.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(t: string): number {
+    
+    return t.match(/^0*/)[0].length
+}
+        </pre>
+        </div>
+        <p>
+            Deklarieren Sie innerhalb der Schleifendefinition eine Variable und erhöhen Sie diese, bis das Zeichen der Zeichenkette an diesem Index gleich "0" ist. 
+        </p>
+        <div class="spoiler">
+        <pre class="brush: javascript">
+function beginningZeros(text: string): number {
+    
+    for (var i = 0; text[i] === '0'; i++);
+
+    return i;
+}
+        </pre>
+        </div>
+        <p>Klicken Sie auf <b>Best Solutions</b> im Menü Mission und sehen Sie sich viele weitere interessante Lösungen an!</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Vielen Dank! Ich weiß und verstehe jetzt mehr! Alles funktioniert einwandfrei!</p>
+    </div>
+    <div class="answer">
+        👍 Freut mich zu hören!
+    </div>
+</div>
+</body>
