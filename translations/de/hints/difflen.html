@@ -1,0 +1,125 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll!</p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Überlegen Sie, was passiert, wenn Sie eine Zeichenkette, die mit Nullen beginnt, in eine Ganzzahl umwandeln?
+        </p>
+        <p>
+            Sie werden gelöscht, denn aus mathematischer Sicht ist 0005 dasselbe wie 5. Sie müssen also nur den Unterschied in der Länge vor und nach der Konvertierung finden.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Nach welcher Funktion suche ich?</p>
+    </div>
+    <div class="answer">
+        <p>Um diese Aufgabe zu lösen, benötigen Sie Funktionen wie <a target="_blank" href="https://www.w3schools.com/python/gloss_python_string_length.asp">str.len()</a>, <a target="_blank" href="https://www.w3schools.com/python/ref_func_str.asp">str()</a>, <a target="_blank" href="https://www.w3schools.com/python/ref_func_int.asp">int()</a>.</p>
+        <p>
+            Konvertieren Sie den eingegebenen String in eine Ganzzahl (verwenden Sie die Funktion <b class="code">int()</b>), konvertieren Sie ihn zurück in einen String (<b class="code">str()</b>), um die Längen vergleichen zu können. Suchen Sie (<b class="code">str.len()</b>) und vergleichen Sie die Länge des eingegebenen Strings mit der Länge des Strings, den Sie nach der Konvertierung erhalten.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Ok. Wie kann ich es dann verwenden?</p>
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+input_string = '0005'
+
+input_string_len = len(input_string)
+# you will get 4
+
+input_string_to_int = int(input_string)
+# you will get 5
+
+input_string_to_int_to_str = str(input_string_to_int)
+# you will get '5' without zeros
+
+input_string_to_int_to_str_len = len(input_string_to_int_to_str)
+# you will get 1
+
+input_string_len - input_string_to_int_to_str_len
+# find and return difference
+        </pre>
+        <p>Vergessen Sie nicht den Sonderfall als String mit lauter Nullen.</p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>Die letzte Frage. Wie wird meine endgültige Lösung aussehen?</p>
+    </div>
+    <div class="answer">
+        <p>
+            Hier ist der gesamte Code.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(a: str) -> int:
+
+    a_num = int(a)
+    if not a_num: # case a as all zeros
+
+        return len(a)
+
+    return len(a) - len(str(a_num))
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Zeigen Sie mir mehr Lösungen!<br />
+            denn ich möchte ein echter 🥇 Python Ninnjaa sein!
+        </p>
+    </div>
+    <div class="answer">
+        <p>Klar, schnapp sie dir!</p>
+        <p>
+            In dieser Lösung entfernen Sie die Nullen am Anfang der Zeichenkette auf eine andere Weise.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(number: str) -> int:
+
+    return len(number) - len(number.lstrip('0'))
+        </pre>
+        </div>
+        <p>
+            Hier iterieren Sie über die Zeichenkette, vergleichen jedes Zeichen mit "0" und erhöhen im Falle der Gleichheit den zuvor deklarierten Zähler.
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def beginning_zeros(number: str) -> int:
+
+    result = 0
+    for n in number:
+        if n!= "0":
+            break
+        result += 1
+
+    return result
+        </pre>
+        </div>
+        <p>Klicken Sie im Missionsmenü auf <b>Best Solutions</b> und sehen Sie sich viele weitere interessante Lösungen an!
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Vielen Dank! Ich weiß und verstehe jetzt mehr! Alles funktioniert bestens!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍 Freut mich zu hören!
+        </p>
+    </div>
+</div>
+</body>
