@@ -1,0 +1,30 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    Sie haben eine Zeichenkette, die nur aus Ziffern besteht. Sie müssen herausfinden, wie viele Nullen ("0") am Anfang der gegebenen Zeichenkette stehen.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Eine Zeichenkette <span>{% if is_js %}(string){% else %}(str){% endif %}</span>, die aus Ziffern besteht.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Eine ganze Zahl <span>{% if is_js %}(number){% else %}(int){% endif %}</span>. 
+</p>
+
+
+<!-- Give some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Vorbedingung:</strong>
+    <i>0-9</i>
+</p>
